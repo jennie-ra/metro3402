@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+   
+}
+
+ul{
+  list-style: none;
+  padding:0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  z-index: 2;
+}
+.blind{
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.logo{
+    padding: 10px;
+    width: 250px;
+    height: 200px;
+}
+
+
+/*  book content */
+
+.content_box{
+    width: 65%;
+    height: 500px;
+    margin: 20px auto 70px auto;
+    
+    border: 1px solid  rgb(80, 80, 80);
+    border-radius: 30px;
+    box-shadow:0 8px 22px rgba(80, 80, 80,0.8);
+}
+.heeyun_book{
+    display: flex;
+    gap: 90px;
+}
+.book_cover {
+    width: 300px;
+    height: 450px;
+    padding: 14px;
+}
+.book_content{
+    margin-top: 25px;
+}
+
+.recommender{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    margin-bottom: 20px;
+    
+}
+.bookIS, .whos{
+     font-size: 20px;
+    font-weight: 900;
+    color: rgb(80, 80, 80);
+     margin-top: 10px;
+     margin-bottom: 10px;
+    
+}
+.book_title, .writer{
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 10px;
+     margin-bottom: 20px;
+     background-color: rgba(248, 223, 179, 0.568);
+     border-radius: 15px;
+     padding: 5px 10px;
+    
+}
+.book_story{
+     font-size: 18px;
+    font-weight: 900;
+    color: rgb(80, 80, 80);
+    
+     margin: 40px 0;
+}
+.comment_title{
+     font-size: 25px;
+    font-weight: 900;
+    margin-top: 60px;
+     margin-bottom: 20px;
+}
+.reasons{
+    font-size: 18px;
+    font-weight: 900;
+    color: rgb(80, 80, 80);
+     margin-bottom: 10px;
+}
+
+
+
+.hwa_title, .hwa_writer{
+    background-color: rgba(201, 158, 241, 0.427);
+}
+
+.jin_title, .jin_writer{
+    background-color: rgba(239, 169, 169, 0.708);
+}
+.som_title, .som_writer{
+    background-color: rgb(229, 246, 228);
+}

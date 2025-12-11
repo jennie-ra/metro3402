@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro3402</title>
+    <link rel="stylesheet" href="./homepage.css">
+
+</head>
+
+<body>
+
+<header>
+    <div class="header_top">
+        <div class="logo"><a href=""><img class="main_logo" src="./img/mainlogo.png" alt=""></a></div>
+        <div class="header_navi">
+            <a href="./gallery.html"> <div class="gallery">gallery</div></a>
+            <a href=""><div class="letter">letter</div></a>
+            <a href="./books.html"><div class="books">books</div></a>
+            <a href=""><div class="luvu">luvu</div></a>
+        </div>
+    </div>
+</header>
+
+<main>
+        <div class="wrap">
+        <div class="card">
+
+            <h1>3402 Member's Detail</h1>
+            <p class="title_desc">Our first year-end storyboard</p>
+
+            <section class="carousel">
+            <div class="viewport" id="viewport">
+                <div class="track" id="track">
+
+                <!-- slide 1 -->
+                <article class="slide">
+                    <img src="./img/hwa.jpeg" alt="">
+                    <div class="info">
+                    <div class="title">Kyoung Hwa Kim</div>
+                    <p class="desc">2025 Year-End Summary</p>
+                    <a class="detail" href="./hwa_detail.html">detail page</a>
+                    </div>
+                </article>
+
+                <!-- slide 2 -->
+                <article class="slide">
+                    <img src="./img/hee.jpeg" alt="">
+                    <div class="info">
+                    <div class="title">HeeYun Hwang</div>
+                    <p class="desc">2025 Year-End Summary</p>
+                    <a class="detail" href="./yun_detail.html">detail page</a>
+                    </div>
+                </article>
+
+                <!-- slide 3 -->
+                <article class="slide">
+                    <img src="./img/som.jpeg" alt="">
+                    <div class="info">
+                    <div class="title">Da Som Lee</div>
+                    <p class="desc">2025 Year-End Summary</p>
+                    <a class="detail" href="./som_detail.html">detail page</a>
+                    </div>
+                </article>
+
+                <!-- slide 4 -->
+                <article class="slide">
+                    <img src="./img/rrau.jpeg" alt="">
+                    <div class="info">
+                    <div class="title">You Jin Ra</div>
+                    <p class="desc">2025 Year-End Summary</p>
+                    <a class="detail" href="./jin_detail.html">detail page</a>
+                    </div>
+                </article>
+
+                </div>
+            </div>
+
+            <!-- controls -->
+            <div class="controls">
+                <button class="btn" id="prevBtn">◀</button>
+                <button class="btn" id="nextBtn">▶</button>
+
+                <div class="indicators" id="indicators">
+                <button class="dot" aria-current="true"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                </div>
+            </div>
+            </section>
+
+            <div class="lastsentence">Goodbye 2025, Welcome 2026</div>
+        </div>
+        </div>
+</main>
+
+
+<footer>
+    <div class="footerline">
+        <div>
+            <div>© 2025 Your Company. All rights reserved.</div>
+            <div>© 2025 Metro3402.</div>
+            <div>ⓒ 2025 Company Metro3402 — 모든 권리 보유.</div>
+            <div>김경화, 라유진, 황희윤, 이다솜 Australia, Brisbane mary st, Metro 3402</div>
+            <div>Thanks for being with us this year.</div>
+        </div>
+        <div class="right_footer">
+            <div>About • Contact • Privacy Policy • Terms</div>
+            <div>Instagram / YouTube / Blog</div>
+            <div>Support / FAQ / Customer Center</div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script>
+const track = document.querySelector("#track");
+const slides = Array.from(track.children);
+const dots = Array.from(document.querySelectorAll(".dot"));
+const prev = document.querySelector("#prevBtn");
+const next = document.querySelector("#nextBtn");
+
+let index = 0;
+
+function update(){
+  track.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach(d => d.setAttribute("aria-current", "false"));
+  dots[index].setAttribute("aria-current", "true");
+}
+
+prev.onclick = () => {
+  index = Math.max(0, index - 1);
+  update();
+};
+
+next.onclick = () => {
+  index = Math.min(slides.length - 1, index + 1);
+  update();
+};
+
+dots.forEach((dot, i)=>{
+  dot.onclick = () => {
+    index = i;
+    update();
+  };
+});
+</script>
+
+</body>
+</html>

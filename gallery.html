@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="./gallery.css">
+
+    
+</head>
+
+
+<body>
+   
+    <header>
+        <div class="header_top">
+            <a href="./homepage.html"><div class="logo"><img src="./img/gallert_logo.png" alt=""></div></a>
+        </div>
+    </header>
+
+
+
+
+    <div class="wrap">
+
+  <div id="grid" class="grid"></div>
+
+  <div class="load-wrap">
+    <button id="loadBtn" class="btn">더보기</button>
+    <div id="loader">로딩 중...</div>
+  </div>
+</div>
+
+<script>
+  // 샘플 이미지 목록
+  const imagePool =[
+    "./img/gallery/01.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-38 002.png",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-38 003.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-39 004.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-39 005.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-40 006.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-40 007.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-40 008.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-41 009.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-41 010.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-42 011.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-42 012.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-43 013.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-43 014.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-43 015.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-43 016.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-44 017.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-44 018.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-45 019.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-45 020.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-45 021.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-45 022.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-45 023.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-46 024.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-46 025.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-46 026.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-47 027.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-47 028.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-47 029.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-15-48 030.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-46 001.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-47 002.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-48 003.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-49 004.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-50 005.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-50 006.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-50 007.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-51 008.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-51 009.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-51 010.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-51 011.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-51 012.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-52 013.jpeg",
+    "./img/gallery/KakaoTalk_Photo_2025-12-07-19-17-52 014.jpeg"
+
+    
+  ]
+
+  const grid = document.getElementById("grid");
+  const loadBtn = document.getElementById("loadBtn");
+  const loader = document.getElementById("loader");
+
+  const BATCH = 16;  // 한 번에 4×4 = 16장
+  let page = 0;
+
+  function createCard(src, idx){
+    return `
+      <div class="card">
+        <img src="${src}" alt="image ${idx}">
+        <div class="body">
+          <div class="title">Image ${idx}</div>
+          
+        </div>
+      </div>
+    `;
+  }
+
+  async function loadMore(){
+    loadBtn.disabled = true;
+    loader.style.display = "block";
+
+    await new Promise(r => setTimeout(r, 600));
+
+    const start = page * BATCH;
+    const end = start + BATCH;
+    const items = imagePool.slice(start, end);
+
+    items.forEach((src, i)=>{
+      grid.insertAdjacentHTML("beforeend", createCard(src, start+i+1));
+    });
+
+    page++;
+
+    loader.style.display = "none";
+    loadBtn.disabled = false;
+
+    if(end >= imagePool.length){
+      loadBtn.style.display = "none";
+    }
+  }
+
+  // 첫 로딩
+  loadMore();
+  loadBtn.addEventListener("click", loadMore);
+</script>
+
+</body>
+</html>

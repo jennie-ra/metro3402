@@ -1,0 +1,43 @@
+
+var ftGUID_9153691="639585E1B4E8E2";
+var ftConfID_9153691="0";
+var ftParams_9153691="ftOBA=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fwww.rawpixel.com%2Fimage%2F15449090%2Fpng-golden-oval-picture-frame-photo-photography-accessories&gdpr=0&ftClick=https://exch.quantserve.com/r?&a=p-1RYxePXT9bCS2&labels=_qc.clk,_click.adserver.rtb,_click.rand.904848702&rtbip=103.229.8.152&rtbdata2=EBc6GGh0dHBzOi8vd3d3LnJhd3BpeGVsLmNvbVokSzlYSlBsUEx0SDF6M01jcVZjcjBKM19WMkhGMi1ILXc2cFE9gAHCtcTQDLoBEzM5MDA5NDQwODA3Nzc0NTY4MDjAAdCGgAHIAcXD_--vM9oBJGZjN2VlMTczLTc1ZmItNDk1MC05NWJmLTQyYzM3YjNiM2YxY7ACDsgCANACzuGG-_if98ypAegCtgLyAg8Iw68NEJ7frZv358ietgHyAg4ItgIQ95me2e_M8ofUAfgCAIoDBDQxOTGSAwhzbWFydF9hZJgDAKgDALIDBNPWCI-6AxIJJ0xtwx2RMWERyPsJ27YVHoDCAxIJvEM9iUdUwKkRm6W3QDd3157IA-GAgIMB2AO-yruvA-IDD3AtMVJZeGVQWFQ5YkNTMuoDBgisAhD6AfIDBTIxMzcw-AMAgASYNIoEAjc3kgQMOTA0MTE4NTc4Nzg2mgQSCYJP9fOh25-mEU4C1OkKf_64ogQSCSdMbcMdkTFhEcj7Cdu2FR6AqgQSCSdMbcMdkTFhEcj7Cdu2FR6AuATQBdAECPIEAktSgAUBigUqMjBjZmQ0YTAwM2MyYzMwNzY5MjAwZTA2OGZjZDhmNjBlMTY2YjBiOTNmkAUBmgUVIM_UoAPCwwdpIA4Gj82PYOFmsLk_ogUkSzlYSlBsUEx0SDF6M01jcVZjcjBKM19WMkhGMi1ILXc2cFE9uAUAwAXCtcTQDMgFx5aqBNIFBggEEAEYAugFBpoGFAoSCYJP9fOh25-mEU4C1OkKf_64oAYAtQYftqI5ugZLCgJLUhICMjgYwoMZIgtzYW5nb2stZG9uZyoFMjEzNzA6GXNrJTIwYnJvYWRiYW5kJTIwY28lMjBsdGRaDnNrJTIwYnJvYWRiYW5kyQY8CADFeRouD9AGONgGOOIGP19mcC5ldmVudC5DQyBQYWlkIENvbnZlcnNpb24sX2ZwLmV2ZW50LkNDIFRyaWFsIENvbnZlcnNpb24sX29yX-oGEWh0dHBzOi8vYWRvYmUuY29t8QYEEADFeRouD4AHAIoHEgm8Qz2JR1TAqRGbpbdAN3fXng&redirecturl3=&ft_custom=9sHOVPWTzgK9lcxX8o_NCKWS1AilwJ8cpJCaAqfAylOjxMhShJMIRQ==&site_url=rawpixel.com&cachebuster=240588.12764416094";
+var ftKeyword_9153691="";
+var ftCustom_9153691="9sHOVPWTzgK9lcxX8o_NCKWS1AilwJ8cpJCaAqfAylOjxMhShJMIRQ==";
+var ftSection_9153691="";
+var ftSegment_9153691="";
+var ftSegmentList_9153691=[];
+var ftRuleMatch_9153691="0";
+var ftTimestamp_9153691="1765198050";
+var ftGeoC2_9153691="kr";
+var ftGeoState_9153691="28";
+var ftGeoCity_9153691="sangok-dong";
+var ftISP_9153691="sk broadband co ltd";
+var ftSpeed_9153691="broadband";
+var ftConnType_9153691="wifi";
+var ftDMA_9153691="410050";
+var ftLong_9153691="126.7";
+var ftLat_9153691="37.5";
+var ftPostal_9153691="21370";
+var ftTimeZone_9153691="+900";
+var ftMobileCarrier_9153691="";
+var ftImp9153691 = {};
+ftImp9153691.privacy = "x";
+ftImp9153691.guidAge = "156";
+ftImp9153691.impID = "AC35B774-2C8F-123E-36F9-714B594F0E8E";
+ftImp9153691.duid = "FT:639585E1B4E8E2";
+
+ftImp9153691.ft_tpplid = "";
+ftImp9153691.ft_c = {};
+ftImp9153691.gdpr = "0";
+ftImp9153691.gdpr_consent = "";
+ftImp9153691.gdpr_pd = "";
+ftImp9153691.oob_consent = "";
+ftImp9153691.gdprStoredConsent = "";
+ftImp9153691.us_privacy = "";
+ftImp9153691.gpc = "";
+
+ftImp9153691.jsAppend = "1";
+var ftCreativeId_9153691 = "5788898";
+(function(){var tag=document.getElementById("ft_servedby_9153691")||function(s){return s[s.length-1]}(document.getElementsByTagName("script")),js=document.createElement("script");js.src="https://ajs-assets.ftstatic.com/ftUtils.js";js.id="ftscript_m9153691";js.setAttribute("name","ftscript_m9153691");tag.parentNode.insertBefore(js,tag)})();window.fTChecker=window.fTChecker||function(id){if(!id)return false;id=""+id;if(window.hasOwnProperty("ftUtils")){window["ft"+id]=Object.assign({},window.ftUtils.common);window["ft"+id].getBannerConfig(id)}else(function(id){window.setTimeout(function(){window.fTChecker(id)},50)})(id)};window.fTChecker("9153691");
+
